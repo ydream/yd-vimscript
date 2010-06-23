@@ -1,11 +1,11 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" VIMÅäÖÃ 
+" VIMé…ç½® 
 " Maintainer: ydream <ydream17@gmail.com>
 " Link: http://ydream.cn
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Ä¬ÈÏÉèÖÃ
+" é»˜è®¤è®¾ç½®
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
 set ruler
@@ -19,7 +19,7 @@ set encoding=utf-8
 set fileencodings=utf-8,ucs-bom,gb18030,gb2312,cp936,big5,euc-jp
 
 if has("win32")
-	set fileencoding=chinese
+	"set fileencoding=chinese
 else
 	set fileencoding=utf-8
 endif
@@ -35,15 +35,15 @@ set selection=inclusive
 
 set path+=d:\\ydream\\work,d:\\ydream\\work\\*
 
-" Æô¶¯Ê±½ø¹¤×÷Ä¿Â¼
+" å¯åŠ¨æ—¶è¿›å·¥ä½œç›®å½•
 execute ":cd d:\\ydream\\work"
 
-" ²éÕÒ¹â±êÎ»ÖÃµÄµ¥´Ê²¢Éú³É½á¹ûÁĞ±í
+" æŸ¥æ‰¾å…‰æ ‡ä½ç½®çš„å•è¯å¹¶ç”Ÿæˆç»“æœåˆ—è¡¨
 "nmap <leader>lv :lvimgrep /<c-r>=expand("<cword>")<cr>/ %<cr>:lw<cr>
 nmap <silent><F4> :vimgrep /<c-r>=expand("<cword>")<cr>/ %<cr>:copen<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Win32ÉèÖÃ
+" Win32è®¾ç½®
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("gui_running") && has("win32")
 	source $VIMRUNTIME/vimrc_example.vim
@@ -60,7 +60,7 @@ if has("gui_running") && has("win32")
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Í¼ĞÎ½çÃæÉèÖÃ
+" å›¾å½¢ç•Œé¢è®¾ç½®
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("gui_running")
 "---------------------------------------------------------------
@@ -106,7 +106,7 @@ let mapleader=","
 let javascript_enable_domhtmlcss=1
 
 """""""""""""""""""""""""""""""
-" ¼üÅÌÓ³Éä
+" é”®ç›˜æ˜ å°„
 """""""""""""""""""""""""""""""
 map <leader>zb :70vsp<cr>:edit D:\ydream\work\html\2010\2010zb.txt<cr><C-w>R
 map <leader>te :70vsp<cr>:edit E:\Users\ydream\Desktop\list.txt<cr><C-w>R
@@ -124,13 +124,13 @@ map <leader>, :colorscheme desert<cr>:colorscheme ydream<cr>
 noremap <C-e> 3<C-e>
 noremap <C-y> 3<C-y>
 
-" ´úÂëËõ½ø
+" ä»£ç ç¼©è¿›
 nmap <tab> v>
 nmap <s-tab> v<
 vmap <tab> >gv
 vmap <s-tab> <gv
 
-" ×Ô¶¯²¹È«À¨ºÅ
+" è‡ªåŠ¨è¡¥å…¨æ‹¬å·
 inoremap ( ()<esc>i
 inoremap ) <c-r>=ClosePair(')')<cr>
 inoremap { {}<esc>i
@@ -140,36 +140,36 @@ inoremap ] <c-r>=ClosePair(']')<cr>
 inoremap < <><esc>i
 inoremap > <c-r>=ClosePair('>')<cr>
 
-" ×Ô¶¯ÕÛµş
+" è‡ªåŠ¨æŠ˜å 
 nnoremap <silent><space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<cr>
 
-" ´ò¿ª/¹Ø±Õ²Ëµ¥À¸
+" æ‰“å¼€/å…³é—­èœå•æ 
 map <silent><expr><F8> MenuToggle()
 
-" ¿ìËÙ²åÈëÊ±¼ä
+" å¿«é€Ÿæ’å…¥æ—¶é—´
 nmap <F10> a<C-r>=strftime("%Y-%m-%d %a %I:%M %p")<cr><esc>
 imap <F10> <C-r>=strftime("%Y-%m-%d %a %I:%M %p")<cr>
 
-" ËÑË÷ÁĞ±í
+" æœç´¢åˆ—è¡¨
 map <leader>/ :SearchList 
 
-" ¿ªÆô/¹Ø±ÕQuickfixÁĞ±í
+" å¼€å¯/å…³é—­Quickfixåˆ—è¡¨
 map <silent><F7> :call QuickfixToggle()<cr>
 
 " Most Recently Used (MRU)
 nmap <silent><F3> :call MRUToggle()<cr>
 
 """""""""""""""""""""""""""""""
-" ²å¼şÉèÖÃ
+" æ’ä»¶è®¾ç½®
 """""""""""""""""""""""""""""""
-" NERDCommentÉèÖÃ
-let NERDSpaceDelims=1       " ÈÃ×¢ÊÍ·ûÓëÓï¾äÖ®¼äÁôÒ»¸ö¿Õ¸ñ
-let NERDCompactSexyComs=1   " ¶àĞĞ×¢ÊÍÊ±Ñù×Ó¸üºÃ¿´
+" NERDCommentè®¾ç½®
+let NERDSpaceDelims=1       " è®©æ³¨é‡Šç¬¦ä¸è¯­å¥ä¹‹é—´ç•™ä¸€ä¸ªç©ºæ ¼
+let NERDCompactSexyComs=1   " å¤šè¡Œæ³¨é‡Šæ—¶æ ·å­æ›´å¥½çœ‹
 
-" NERDTreeÉèÖÃ
+" NERDTreeè®¾ç½®
 nmap <silent><F2> :NERDTreeToggle<cr>
 
-" NEOComplcacheÉèÖÃ
+" NEOComplcacheè®¾ç½®
 let g:NeoComplCache_EnableAtStartup = 1
 "let g:NeoComplCache_SnippetsDir = $HOME.'/.vim/snippets'
 "let g:NeoComplCache_DisableAutoComplete = 1
@@ -191,16 +191,16 @@ inoremap <expr><tab> pumvisible() ? "\<C-n>" : "\<tab>"
 inoremap <expr><s-tab> pumvisible() ? "\<C-p>" : "\<tab>"
 imap <s-space> <Plug>(neocomplcache_snippets_expand)
 
-" ShowmarksÉèÖÃ
+" Showmarksè®¾ç½®
 let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 let g:showmarks_enable = 1
 let showmarks_ignore_type = "hqm"
-"<Leader>mt   - ´ò¿ª/¹Ø±ÕShowMarks²å¼ş
-"<Leader>mh   - Çå³ıµ±Ç°ĞĞµÄ±ê¼Ç
-"<Leader>ma   - Çå³ıµ±Ç°»º³åÇøÖĞËùÓĞµÄ±ê¼Ç
-"<Leader>mm   - ÔÚµ±Ç°ĞĞ´òÒ»¸ö±ê¼Ç£¬Ê¹ÓÃÏÂÒ»¸ö¿ÉÓÃµÄ±ê¼ÇÃû
+"<Leader>mt   - æ‰“å¼€/å…³é—­ShowMarksæ’ä»¶
+"<Leader>mh   - æ¸…é™¤å½“å‰è¡Œçš„æ ‡è®°
+"<Leader>ma   - æ¸…é™¤å½“å‰ç¼“å†²åŒºä¸­æ‰€æœ‰çš„æ ‡è®°
+"<Leader>mm   - åœ¨å½“å‰è¡Œæ‰“ä¸€ä¸ªæ ‡è®°ï¼Œä½¿ç”¨ä¸‹ä¸€ä¸ªå¯ç”¨çš„æ ‡è®°å
 
-" FuzzyFinderÉèÖÃ
+" FuzzyFinderè®¾ç½®
 nmap <leader>fb :FufBuffer<cr>
 nmap <leader>ff :FufFile<cr>
 nmap <leader>fd :FufDir<cr>
@@ -209,7 +209,7 @@ nmap <leader>fm :FufAddBookmark<cr>
 nmap <leader>fc :FufChangeList<cr>
 "noremap <silent> <C-]> :FufTagWithCursorWord!<CR>
 
-" TasklisÉèÖÃ
+" Tasklisè®¾ç½®
 nmap <silent> <leader>tl :TaskList<cr>
 
 """""""""""""""""""""""""""""""
@@ -226,11 +226,11 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ×Ô¶¨Òåº¯Êı
+" è‡ªå®šä¹‰å‡½æ•°
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:QuickfixState = 0
 
-" À¨ºÅ×Ô¶¯Åä¶Ôºó·ÀÖ¹ÖØ¸´ÊäÈë
+" æ‹¬å·è‡ªåŠ¨é…å¯¹åé˜²æ­¢é‡å¤è¾“å…¥
 function! ClosePair(char)
 	if getline('.')[col('.') - 1] == a:char
 		return "\<Right>"
@@ -285,7 +285,7 @@ function! SearchList(key)
 	execute ':copen'
 endfunction
 
-" ´ò¿ª/¹Ø±ÕQuickfixÁĞ±í
+" æ‰“å¼€/å…³é—­Quickfixåˆ—è¡¨
 function! QuickfixToggle()
 	redir => ls_rst
 		execute ":silent! ls"
@@ -297,7 +297,7 @@ function! QuickfixToggle()
 	endif
 endfunction
 
-" ´ò¿ª/¹Ø±ÕMRUÁĞ±í
+" æ‰“å¼€/å…³é—­MRUåˆ—è¡¨
 function! MRUToggle()
 	let winnum = bufwinnr('__MRU_Files__')
 	if winnum != -1
