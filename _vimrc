@@ -50,7 +50,6 @@ if has("gui_running") && has("win32")
 	source $VIMRUNTIME/mswin.vim
 	behave mswin
 	set guifont=Consolas:h9:cANSI
-	" set guifontwide=NSimsun:h9
 	set guitablabel=%t
 	set guioptions-=T
 	set guioptions-=m
