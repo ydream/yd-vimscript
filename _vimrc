@@ -36,7 +36,7 @@ set selection=inclusive
 set path+=d:\\ydream\\work,d:\\ydream\\work\\*
 
 " 启动时进工作目录
-
+execute ":cd d:\\ydream\\work"
 
 " 查找光标位置的单词并生成结果列表
 "nmap <leader>lv :lvimgrep /<c-r>=expand("<cword>")<cr>/ %<cr>:lw<cr>
@@ -50,6 +50,7 @@ if has("gui_running") && has("win32")
 	source $VIMRUNTIME/mswin.vim
 	behave mswin
 	set guifont=Consolas:h9:cANSI
+	" set guifontwide=NSimsun:h9
 	set guitablabel=%t
 	set guioptions-=T
 	set guioptions-=m
@@ -120,6 +121,9 @@ map <leader>w <c-w>
 "imap <leader>, <c-x><c-o>
 
 map <leader>, :colorscheme desert<cr>:colorscheme ydream<cr>
+
+noremap <C-e> 3<C-e>
+noremap <C-y> 3<C-y>
 
 " 代码缩进
 nmap <tab> v>
